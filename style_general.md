@@ -16,7 +16,7 @@ This is a mult-line comment in MATLAB.
 ```
 
 ## Script headers
-####General Header for scripts
+#### General Header for scripts
 ```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [name of file]
