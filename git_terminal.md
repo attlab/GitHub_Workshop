@@ -41,7 +41,7 @@ Now suppose we realized a mistake in our file and wanted to make another change 
 This will return the lines (content and locations) that are different for us to inspect. In order to stage the new changes we must re-stage the file. Now our file is ready for a commit. 
 
 # Commit and Push
-The line below is a simple way to commit the objects in the staging area. The `-m` flag tells git that we will include a message along with the commit. A message is always necessary and omitting the `-m` flag will automatically open the text editor for you to add a message. With the `-m` flag you can add a note in quotes. Anything ~50 words or less is appropriate for this flag. 
+The line below is a simple way to commit the objects in the staging area. The `-m` flag tells git that we will include a message along with the commit. A message is always necessary and omitting the `-m` flag will automatically open the text editor for you to add a message. With the `-m` flag you can add a note in quotes. Anything ~50 characters or less is appropriate for this flag. 
 ```
 $ git commit -m "Cris commit" 
 ```
