@@ -60,3 +60,27 @@ $ git commit -m "delete cris.txt"
 $ git push
 ```
 You can verify that this worked by using `$ git status` or checking the repo in your browser. 
+
+---
+---
+---
+# Other useful commands
+### checkout
+Suppose you have a functional script that you have pushed to your repo, but you continued making changes and messed up the script so bad that you need to revert back to the working version. You can inspect the differences between your current work and your repo's last commit with git's `diff` command then manually change the script back, *or* you can use the `checkout` command to revert back to the last commit. The code below will change the `cris.txt` file on your machine to match the `cris.txt` from the HEAD commit on the repo. 
+```
+$ git checkout HEAD cris.txt
+```
+**`checkout` is often used for switching between branches of a repo**
+
+### reset
+Now, suppose you have made edits to the following two files: `cris.txt`, `cris2.txt`. You have critical updates to `cris.txt` so you `$ git add --all` to stage your files, but then you realize that there are errors in `cris2.txt`. You can unstage individual files with the `reset` command in the following way. *This method resets the specified file to match the one in the HEAD commit.*
+```
+git reset HEAD cris2.txt
+```
+The output of this line should show `M    cris2.txt` (M indicates modification). Now you can commit the staged files without pushing unwanted changes in some scripts. 
+
+Another use of `reset` is to reset your local repo to a previous commit. Suppose you really messed things up and just need to go back to a previous state of the repo. You can either use the `log` command to look at commit's SHA (secure hash algorithm-1) or you can use your preferred interface to look at past commits. Once you find a commit that you want to revert back to, copy the first 7 characters of the commit's SHA and pass those characters as an argument to `reset`.
+```
+git log
+git reset aab459b
+```
