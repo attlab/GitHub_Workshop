@@ -10,3 +10,5 @@
 git add images
 git commit -m "updated images"
 git push
+
+echo "Updated images folder on git!"
